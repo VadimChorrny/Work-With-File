@@ -1,0 +1,18 @@
+﻿@model IEnumerable<FileDemo.Models.File>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a asp-action="Create" class="btn btn-primary">Create</a>
+    <div>
+        <ul>
+        @foreach(var file in Model)
+        {
+            <li><img src="@WebConstants.carImagesPath@file.Image"/></li>
+        }
+        </ul>
+    </div>
+</div>
